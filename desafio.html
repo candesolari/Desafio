@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juego de Aventura - BAKERY</title>
+    <link rel="stylesheet" href="desafio.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Situación inicial -->
+        <header>
+            <h1>Bienvenido a BAKERY</h1>
+        </header>
+        <main id="situacion-inicial">
+            <section>
+                <img src="personaje.jpg" alt="Logo" style="width: 400px; height: 350px;">
+                <p>ELIGE TU PERSONAJE</p>
+                <div class="buttons">
+                    <button onclick="mostrarResolucion('resolucion1')">ROY</button>
+                    <button onclick="mostrarResolucion('resolucion1')">JOY</button>
+                </div>
+            </section>
+        </main>
+
+        <!-- Resoluciones -->
+        <main id="resolucion1" class="resolucion" style="display: none;">
+            <section>
+                <h2>¿Qué cocinamos?</h2>
+                <img src="logo.jpg" alt="Resolución 1" style="width: 400px; height: 350px;">
+                <div class="buttons">
+                    <button onclick="mostrarResolucion('resolucion3')">CUPCAKE</button>
+                    <button onclick="mostrarResolucion('resolucion4')">TORTA</button>
+                    <button onclick="mostrarResolucion('resolucion5')">TARTA</button>
+                </div>
+                <div class="return-button">
+                    <a href="#" class="button" onclick="volverInicio()">Volver al inicio</a>
+                </div>
+            </section>
+        </main>
+
+        <main id="resolucion3" class="resolucion" style="display: none;">
+            <section>
+                <h2>Prepara un Cupcake</h2>
+                <img src="cupcake.jpg" alt="Cupcake" style="width: 400px; height: 250px;">
+                <form onsubmit="redirigirGracias(event, 'cupcake')">
+                    <label for="decoracion1">Topping :</label>
+                    <select id="decoracion1" name="decoracion1">
+                        <option value="chispas">Chispas de chocolate</option>
+                        <option value="granas">Granas</option>
+                        <option value="cereza">Cereza</option>
+                        <option value="bombon">Bombón de chocolate</option>
+                    </select><br><br>
+
+                    <label for="decoracion2">Frosting:</label>
+                    <select id="decoracion2" name="decoracion2">
+                        <option value="frosting">Frosting de vainilla</option>
+                        <option value="frosting-chocolate">Frosting de chocolate</option>
+                        <option value="frutilla">Frutilla</option>
+                        <option value="nueces">Nueces</option>
+                    </select><br><br>
+
+                    <label for="decoracion3">Topping 2:</label>
+                    <select id="decoracion3" name="decoracion3">
+                        <option value="confites">Confites</option>
+                        <option value="merengue">Merengue</option>
+                        <option value="fondant">Fondant</option>
+                        <option value="azucar">Azúcar glas</option>
+                    </select><br><br>
+
+                    <input type="submit" value="Enviar">
+                </form>
+                <div class="return-button">
+                    <a href="#" class="button" onclick="volverInicio()">Volver al inicio</a>
+                </div>
+            </section>
+        </main>
+
+        <main id="resolucion4" class="resolucion" style="display: none;">
+            <section>
+                <h2>Hornear una Torta</h2>
+                <form onsubmit="redirigirGracias(event, 'torta')">
+                    <label for="decoracion1">Froasting:</label>
+                    <select id="decoracion1" name="decoracion1">
+                        <option value="frutilla">Frutilla</option>
+                        <option value="merengue">Merengue</option>
+                        <option value="chocolate">Chocolate</option>
+                
+                    </select><br><br>
+
+                    <label for="decoracion2">Salsa:</label>
+                    <select id="decoracion2" name="decoracion2">
+                        <option value="fondant">Salsa de chocolate</option>
+                        <option value="frutilla">Salsa de frutilla</option>
+                        <option value="ddl">Salsa de dulce de leche</option>
+                        <option value="vainilla">Salsa de vainilla</option>
+                    </select><br><br>
+
+                    <label for="decoracion3"> Topping:</label>
+                    <select id="decoracion3" name="decoracion3">
+                        <option value="confites">Confites</option>
+                        <option value="cereza">Cereza</option>
+                        <option value="chispas">Chispas de chocolate</option>
+                        <option value="bombon">Bombón de chocolate</option>
+                    </select><br><br>
+
+                    <input type="submit" value="Enviar">
+                </form>
+                <div class="return-button">
+                    <a href="#" class="button" onclick="volverInicio()">Volver al inicio</a>
+                </div>
+            </section>
+        </main>
+
+        <main id="resolucion5" class="resolucion" style="display: none;">
+            <section>
+                <h2>Hacer una Tarta</h2>
+              
+                <form onsubmit="redirigirGracias(event, 'tarta')">
+                    <label for="decoracion1"> Relleno:</label>
+                    <select id="decoracion1" name="decoracion1">
+                        <option value="Batata">Batata</option>
+                        <option value="membrillo">Membrillo</option>
+                        <option value="coco">Coco y dulce de leche</option>
+                      
+                    </select><br><br>
+
+                    <label for="decoracion2">Decoración 2:</label>
+                    <select id="decoracion2" name="decoracion2">
+                        <option value="Almibar">Almibar</option>
+                        <option value="azucar">Azúcar glas</option>
+                        <option value="coco">Coco rallado</option>
+                    
+                    </select><br><br>
+
+                    <label for="decoracion3">Topping:</label>
+                    <select id="decoracion3" name="decoracion3">
+                        <option value="confites">Confites</option>
+                        <option value="cereza">Cereza</option>
+                        <option value="chispas">Chispas de chocolate</option>
+                        <option value="bombon">Bombón de chocolate</option>
+                    </select><br><br>
+
+                    <input type="submit" value="Enviar">
+                </form>
+                <div class="return-button">
+                    <a href="#" class="button" onclick="volverInicio()">Volver al inicio</a>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>&copy; 2024 Juego de Aventura. Todos los derechos reservados.</p>
+        </footer>
+    </div>
+
+    <script>
+        function mostrarResolucion(id) {
+            document.getElementById('situacion-inicial').style.display = 'none';
+            document.querySelectorAll('.resolucion').forEach(function(section) {
+                section.style.display = 'none';
+            });
+            document.getElementById(id).style.display = 'block';
+        }
+
+        function volverInicio() {
+            document.getElementById('situacion-inicial').style.display = 'block';
+            document.querySelectorAll('.resolucion').forEach(function(section) {
+                section.style.display = 'none';
+            });
+        }
+
+    </script>
+</body>
+</html>
